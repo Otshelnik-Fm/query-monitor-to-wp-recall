@@ -94,7 +94,8 @@ function qmwpr_style( $styles ) {
 }
 #wp-admin-bar-query-monitor-warnings,
 #wp-admin-bar-query-monitor-db_dupes,
-#wp-admin-bar-query-monitor-notices {
+#wp-admin-bar-query-monitor-notices,
+#wp-admin-bar-query-monitor-quiets {
     display: none;
 }';
     }
@@ -115,7 +116,7 @@ function qmwpr_script() {
     if ( qmwpr_user_verified() || current_user_can( 'manage_options' ) ) {
         $out        = '
 jQuery(document).ready(function(){setTimeout(function(){
-    var warn = jQuery("#wp-admin-bar-query-monitor-warnings > a,#wp-admin-bar-query-monitor-notices > a,#wp-admin-bar-query-monitor-db_dupes > a");
+    var warn = jQuery("#wp-admin-bar-query-monitor-warnings > a,#wp-admin-bar-query-monitor-notices > a,#wp-admin-bar-query-monitor-db_dupes > a, #wp-admin-bar-query-monitor-quiets > a");
     if(warn.length > 0){
         jQuery("#wp-admin-bar-query-monitor").append(warn);
         jQuery("#wp-admin-bar-query-monitor > a:not(:first-child)").addClass("qmwpr_notice");

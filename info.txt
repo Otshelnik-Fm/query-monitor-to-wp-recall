@@ -1,5 +1,5 @@
 Name: Query Monitor to WP-Recall;
-Version: 1.0;
+Version: 1.1;
 Support Core: 16.17.0;
 Description: Интеграция плагина Query Monitor с WP-Recall;
 Author: Владимир Дружаев (Otshelnik-Fm);
